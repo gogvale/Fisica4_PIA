@@ -1,17 +1,26 @@
 // Pines de arduino
-int green1 = 5
-int yellow1 = 6
-int red1 = 7
-int green2 = 8
-int yellow2 = 9
-int red2 = 10
+int green1 = 5;
+int yellow1 = 6;
+int red1 = 7;
+int green2 = 8;
+int yellow2 = 9;
+int red2 = 10;
+
+void setup(){
+	pinMode(green1, OUTPUT);
+	pinMode(yellow1, OUTPUT);
+	pinMode(red1, OUTPUT);
+	pinMode(green2, OUTPUT);
+	pinMode(yellow2, OUTPUT);
+	pinMode(red2, OUTPUT);
+}
 
 void turnoff(led){
-  // Apaga LED
+	// Apaga LED
   digitalWrite(led, LOW);
 }
 void turnon(led){
-  // Prende LED
+	// Prende LED
   digitalWrite(led, HIGH);
 }
 void switchled(ledoff,ledon,wait){
@@ -27,7 +36,7 @@ void green2red(green,yellow,red){
   switchled(yellow,red,500);
 }
 void main(){
-  // Define estado inicial e inicia secuencia de transformación de LEDs
+  // Define estado inicial e inicia secuencia de transformaci?n de LEDs
   turnon(green1);
   turnon(red2);
   green2red(green1,yellow1,red1);
